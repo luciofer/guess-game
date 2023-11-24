@@ -2,6 +2,9 @@ const tryBtn = document.querySelector("#tryBtn")
 const resetBtn = document.querySelector("#resetBtn")
 const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
+const input = document.querySelector("#inputNumber")
+const tryAgain = document.querySelector(".error-message")
+
 let randomNumber = Math.floor(Math.random() * 11)
 
 let xAttempts = 1
@@ -26,10 +29,16 @@ tryBtn.addEventListener('click', (event) => {
     if(Number(inputNumber.value) == randomNumber) {
         toggleScreen()
         screen2.querySelector("h2").innerText = `You gussed it in ${xAttempts} attempts!`
+    } else {
+        tryAgain.classList.remove("hide")
+        xAttempts++
+        inputNumber.value = ""
     }
 
-    xAttempts++
-    inputNumber.value = ""
+})
+
+input.addEventListener('input', () => {
+    tryAgain.classList.add("hide")
 })
 
 
