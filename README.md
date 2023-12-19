@@ -3,6 +3,8 @@
 This is a game where the player has to guess a number between 0 and 10. The number is randomly selected using JavaScript and the number of attemps is displayed after the correct guess.
 > 
 
+[Click here to play](https://luciofer.github.io/guess-game/)
+
 ## 👩🏾‍💻 Technologies
 
 - HTML5

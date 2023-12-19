@@ -28,7 +28,7 @@ tryBtn.addEventListener('click', (event) => {
 
     if(Number(inputNumber.value) == randomNumber) {
         toggleScreen()
-        screen2.querySelector("h2").innerText = `You gussed it in ${xAttempts} attempts!`
+        screen2.querySelector("h2").innerText = `You guessed it in ${xAttempts} attempts!`
     } else {
         tryAgain.classList.remove("hide")
         xAttempts++
